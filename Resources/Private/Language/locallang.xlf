@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-07-07T03:46:40Z" product-name="qxnewsletter">
+		<header/>
+		<body>
+			<trans-unit id="tx_qxnewsletter_domain_model_newsletter">
+				<source>Newsletter</source>
+			</trans-unit>
+			<trans-unit id="tx_qxnewsletter_domain_model_newsletter.title">
+				<source>Title</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

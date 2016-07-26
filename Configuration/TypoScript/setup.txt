@@ -1,0 +1,45 @@
+
+plugin.tx_qxnewsletter_mod1 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_qxnewsletter_mod1.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_qxnewsletter_mod1.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_qxnewsletter_mod1.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_qxnewsletter_mod1.persistence.storagePid}
+	}
+}
+
+plugin.tx_qxnewsletter._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-qxnewsletter table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-qxnewsletter table th {
+		font-weight:bold;
+	}
+
+	.tx-qxnewsletter table td {
+		vertical-align:top;
+	}
+
+	.typo3-messages .message-error {
+		color:red;
+	}
+
+	.typo3-messages .message-ok {
+		color:green;
+	}
+
+)

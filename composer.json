@@ -1,0 +1,8 @@
+{
+	"config": {
+		"vendor-dir": "Vendors"
+	},
+	"require": {
+		"pelago/emogrifier": "@dev"
+	}
+}
