@@ -3,6 +3,24 @@
 	<f:flashMessages/>
 
 	<f:be.container>
-		<f:form.textarea value="{pageSource}" style="width: 100%; height: 800px;" />
+		<div class="module">
+			<div class="module-body">
+				<f:form action="mail" class="form-section">
+					<div class="row form-group">
+						<div class="col-sm-4">
+							<f:form.textfield name="email" value="" class="form-control" />
+						</div>
+						<div class="col-sm-3">
+							<f:form.button class="btn btn-default">Test E-Mail</f:form.button>
+						</div>
+					</div>
+					<div class="row form-group">
+						<div class="col-sm-12">
+							<f:form.textarea value="{pageSource}" style="width: 100%; height: 800px;" />
+						</div>
+					</div>
+				</f:form>
+			</div>
+		</div>
 	</f:be.container>
 </f:section>

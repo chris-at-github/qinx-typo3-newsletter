@@ -48,7 +48,6 @@ class NewsletterController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
 	 */
 	protected function getPageSource($pageUid) {
 		$pageUrl = \TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv('TYPO3_SITE_URL') . 'index.php?id=' . $pageUid;
-		echo $pageUrl;
 
 		return \TYPO3\CMS\Core\Utility\GeneralUtility::getUrl($pageUrl);
 	}
