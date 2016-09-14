@@ -31,4 +31,11 @@ $EM_CONF[$_EXTKEY] = array(
 		'suggests' => array(
 		),
 	),
+	'autoload' => array(
+		'psr-4' =>
+			array(
+				'Qinx\\Qxnewsletter\\' => 'Classes',
+				'Pelago\\' => 'Vendors/pelago/emogrifier/Classes',
+			),
+	),
 );

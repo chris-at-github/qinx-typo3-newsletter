@@ -66,9 +66,8 @@ class NewsletterController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
 	}
 
 	public function readAction() {
-
 		$pageSource = $this->getPageSource($this->getPageUid());
 
-		$this->view->assign('pageSource', $this->transform($pageSource));
+		$this->view->assign('pageSource', $pageSource);
 	}
 }
