@@ -69,4 +69,28 @@ class NewsletterController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
 
 		$this->view->assign('pageSource', $pageSource);
 	}
+
+	public function mailAction() {
+		if($this->request->hasArgument('email') === true) {
+			$from = \TYPO3\CMS\Core\Utility\MailUtility::getSystemFrom();
+			$mail = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Mail\\MailMessage');
+
+			$mail
+				->setSubject('Testmail [' . $this->getPageUid() . ']')
+				->setFrom($from)
+				->setTo(array($this->request->getArgument('email') => 'Testmail Empfänger [' . $this->getPageUid() . ']'))
+				->setBody(strip_tags($this->request->getArgument('html')))
+				->addPart(strip_tags($this->request->getArgument('html')), 'text/html')
+				->send();
+
+			if($mail->isSent() === true) {
+				$this->addFlashMessage('Test E-Mail erfolgreich an ' . $this->request->getArgument('email') . ' versandt', null);
+
+			} else {
+				$this->addFlashMessage('Test E-Mail an ' . $this->request->getArgument('email') . 'konnte nicht versandt werden', null, \TYPO3\CMS\Core\Messaging\FlashMessage::ERROR);
+			}
+		}
+
+		$this->forward('read');
+	}
 }

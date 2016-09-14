@@ -1,22 +1,23 @@
 <f:layout name="Default"/>
 <f:section name="Main">
-	<f:flashMessages/>
 
 	<f:be.container>
 		<div class="module">
 			<div class="module-body">
+				<f:flashMessages />
+
 				<f:form action="mail" class="form-section">
 					<div class="row form-group">
 						<div class="col-sm-4">
-							<f:form.textfield name="email" value="" class="form-control" />
+							<f:form.textfield name="email" class="form-control" />
 						</div>
 						<div class="col-sm-3">
-							<f:form.button class="btn btn-default">Test E-Mail</f:form.button>
+							<f:form.button class="btn btn-default">Test E-Mail versenden</f:form.button>
 						</div>
 					</div>
 					<div class="row form-group">
 						<div class="col-sm-12">
-							<f:form.textarea value="{pageSource}" style="width: 100%; height: 800px;" />
+							<f:form.textarea name="html" value="{pageSource}" style="width: 100%; height: 800px;" />
 						</div>
 					</div>
 				</f:form>
